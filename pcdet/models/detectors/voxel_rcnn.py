@@ -86,12 +86,13 @@ class VoxelRCNN_AE_TestTimeTraining(Detector3DTemplate_DG_2_Source_Domain):
                 'points': batch_dict['points_org'],
                 'batch_size': batch_dict['batch_size'],
             }
+            # using vfe and backbone3d only
             for idx_module, cur_module in enumerate(self.module_list):
                 if idx_module in [0, 1]:
                     batch_dict_org = cur_module(batch_dict_org)
             # output => ['input_sp_tensor'], ['multi_scale_3d_features']['x_conv4']
 
-            # normal detection
+            # using vfe and backbone3d only
             for idx_module, cur_module in enumerate(self.module_list):
                 if idx_module in [0, 1]:
                     batch_dict = cur_module(batch_dict)
@@ -110,6 +111,7 @@ class VoxelRCNN_AE_TestTimeTraining(Detector3DTemplate_DG_2_Source_Domain):
 
         else:
             for idx_module, cur_module in enumerate(self.module_list):
+                # During testing, skip the decoder
                 if idx_module == 2:
                     continue
                 batch_dict = cur_module(batch_dict)
