@@ -63,6 +63,9 @@ python train_multi_db_dg_AE_TTT.py \
 --iter_num_per_tar 5 --batch_size 1
 ```
 
+### Physical-aware Density-resampling Data Augmentation(PDDA):
+PDDA augmentation is implemented through the `multi_aug_common_corruption` function in pcdet/datasets/augmentor/data_augmentor.py, which includes 'layer_del_scene' and 'layer_interp_scene'. The `multi_aug_common_corruption` also could be extended to include other common corruption simulations.
+
 &ensp;
 ## Model Zoo: 
 
