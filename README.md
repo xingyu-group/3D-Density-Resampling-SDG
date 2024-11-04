@@ -80,11 +80,13 @@ Due to [Waymo Dataset License Agreement](https://waymo.com/open/terms/), we coul
 ## Citation
 If you find this project useful in your research, please consider citing:
 ```
-@article{li2023domain,
+@inproceedings{li2025domain,
   title={Domain Generalization of 3D Object Detection by Density-Resampling},
   author={Li, Shuangzhi and Ma, Lei and Li, Xingyu},
-  journal={arXiv preprint arXiv:2311.10845},
-  year={2023}
+  booktitle={European Conference on Computer Vision},
+  pages={456--473},
+  year={2025},
+  organization={Springer}
 }
 ```
 
